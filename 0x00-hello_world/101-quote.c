@@ -1,14 +1,11 @@
-#include <stdio.h>
 #include <unistd.h>
+#include <string.h>
+#define STDERR 2
 
-/**
- * main - Entry point
- *
- * Return: Always 1 (Success)
- */
-int main(void)
-{
-        write(2;
-	"and that piece of art is useful" - Dora Korpar, 2015-10-19\n", 59);
-	return (1);
+int main(void) {
+    const char* msg = "and that piece of art is useful - Dora Korpar, 2015-10-19\n";
+    ssize_t len = strlen(msg);
+    write(STDERR, msg, len);
+    return 1;
 }
+
